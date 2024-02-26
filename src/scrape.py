@@ -32,7 +32,7 @@ def pre_processing(fileNames):
     for i in range(len(fileNames)):
       for j in range(len(fileNames[i])):
         if 'Unnamed: 2' in fileNames[i][j]:
-          fileNames[i][j].columns = fileNames[i][j].iloc[0]
+          fileNames[i][j].columns = fileNames[i][j].iloc[0].values
           fileNames[i][j] = fileNames[i][j].drop(fileNames[i][j].index[[0,1]])
           fileNames[i][j] = fileNames[i][j].dropna(axis=1, how='all')
         else:
@@ -42,16 +42,15 @@ def pre_processing(fileNames):
         if pd.isna(fileNames[i][j].columns[-1]): fileNames[i][j] = fileNames[i][j].drop([np.nan], axis=1)
 
     conc = []
-
     for i in fileNames:
       conc.append(pd.concat(i))
+
 
     return conc
 
 def to_csv(conc, stations):
     for i in range(len(conc)):
       conc[i].to_csv('../final_data/' + stations[i]+'.csv', sep=';', index=False, encoding='utf-8')
-
 
 def remove_accents(input):
   nfkd_form = unicodedata.normalize('NFKD', input)
