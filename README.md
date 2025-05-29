@@ -9,3 +9,23 @@ Pasta com os notebooks utilizados para a caracterização dos dados utilizados n
 
 ## data
 Pasta com os dados utilizados para as análises realizadas no trabalho.
+
+## Como citar
+
+``` bibtex
+@inproceedings{joao_courb2025,
+ author = {João A. S. Silva and Felipe D. Cunha},
+ title = { Impacto da Imputação de Dados na Predição da Qualidade do Ar: Um Estudo de Caso em Congonhas-MG},
+ booktitle = {Anais do IX Workshop de Computação Urbana},
+ location = {Natal/RN},
+ year = {2025},
+ keywords = {},
+ issn = {2595-2706},
+ pages = {71--84},
+ publisher = {SBC},
+ address = {Porto Alegre, RS, Brasil},
+ doi = {10.5753/courb.2025.8700},
+ url = {https://sol.sbc.org.br/index.php/courb/article/view/35252}
+}
+
+```
